@@ -1,88 +1,178 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-   
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: whitesmoke;
-  }
-   
-  img {
-    width: 100%;
-  }
-   
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #e0f7fa; /* Soft light blue background */
+  color: #333; /* Improved text color */
+}
+
+img {
+  width: 100%;
+}
+
+.contact-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px; /* Slightly increased padding */
+  background: white; /* Add background for better contrast */
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-app h1 {
+  font-weight: 600; /* Bolder title */
+  font-size: 2.5rem; /* Responsive font size */
+  margin-bottom: 24px;
+  color: #2c3e50; /* Darker title color */
+  text-align: center; /* Centered title */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0; /* Reduced margin for tighter spacing */
+  border: 1px dashed #ccc; /* Lighter dashed border */
+  padding: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s; /* Smooth transition */
+  position: relative; /* Positioning for delete button */
+}
+
+.contact-item:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+.contact-item__image img {
+  width: 64px;
+  border-radius: 50%;
+  border: 2px solid #2c3e50; /* Border for images */
+}
+
+.contact-item__body {
+  margin-left: 16px; /* Increased space for better layout */
+  padding-left: 16px;
+  border-left: 2px solid #2c3e50; /* Thicker left border */
+  flex: 1;
+}
+
+.contact-item__title {
+  font-size: 1.25rem; /* Responsive title font size */
+  padding: 4px 0;
+  color: #2c3e50; /* Darker title color */
+}
+
+.contact-item__username {
+  font-weight: 300; /* Lighter weight for username */
+  color: #7f8c8d; /* Lighter color for username */
+}
+
+.contact-item__delete {
+  position: absolute; /* Positioned delete button */
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%); /* Centering delete button */
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: orangered;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.contact-item__delete:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.contact-input {
+  border: 1px dashed #ccc;
+  padding: 16px;
+  margin: 20px 0; /* Consistent margins */
+  border-radius: 8px;
+  background-color: #fff; /* Background for input section */
+}
+
+.contact-input input {
+  display: block;
+  width: 100%;
+  padding: 12px; /* More padding for input */
+  margin: 8px 0;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #ccc; /* Solid border for inputs */
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+.contact-input input:focus {
+  border-color: #2c3e50; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.contact-input button {
+  width: 100%;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  background-color: #3498db; /* Primary button color */
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  font-weight: bold; /* Bold button text */
+}
+
+.contact-input button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .contact-app {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-   
+    padding: 16px; /* Adjust padding for smaller screens */
   }
-   
-  .contact-app  h1 {
-    font-weight: normal;
-    font-size: 48px;
-    margin-bottom: 32px;
+
+  .contact-app h1 {
+    font-size: 2rem; /* Decrease title size */
   }
-   
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin: 24px 0;
-    border: 1px dashed black;
-    padding: 16px;
-    border-radius: 8px;
-  }
-   
-  .contact-item__image img {
-    width: 64px;
-    border-radius: 50%;
-  }
-   
-  .contact-item__body {
-    margin-left: 8px;
-    padding-left: 8px;
-    border-left: 1px solid #aaa;
-    flex: 1;
-  }
-   
+
   .contact-item__title {
-    padding: 4px 0;
+    font-size: 1.125rem; /* Adjust title font size */
   }
-   
-  .contact-item__username {
-    font-weight: lighter;
-  }
-   
+
   .contact-item__delete {
-    padding: 8px;
-    font-size: 18px;
-    background-color: orangered;
-    color: white;
-    border: 0;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 14px; /* Smaller font size for delete button */
   }
-   
-  .contact-input {
-    border: 1px dashed black;
-    padding: 16px;
-    margin: 14px 0;
-    border-radius: 8px;
-    margin-bottom: 32px;
-  }
-   
-  .contact-input input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    font-family: 'Inter', sans-serif;
-  }
-   
+
+  .contact-input input,
   .contact-input button {
-    width: 100%;
-    padding: 8px;
-    font-family: 'Inter', sans-serif;
+    padding: 10px; /* Reduce padding for inputs and buttons */
   }
+}
+
+@media (max-width: 480px) {
+  .contact-app h1 {
+    font-size: 1.5rem; /* Further decrease title size */
+  }
+
+  .contact-item {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .contact-item__body {
+    margin-left: 0; /* Reset margin */
+    padding-left: 0; /* Reset padding */
+    border-left: none; /* Remove left border */
+  }
+
+  .contact-item__delete {
+    position: static; /* Reset delete button position */
+    margin-top: 10px; /* Add spacing above delete button */
+    width: 100%; /* Full width for delete button */
+  }
+}
